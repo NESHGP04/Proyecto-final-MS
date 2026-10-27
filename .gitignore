@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+
+# Instrucciones privadas del reparto (se pasan por WhatsApp, no van al repo público)
+tareas/
