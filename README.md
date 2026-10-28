@@ -18,6 +18,18 @@ pip install -e .
 pytest
 ```
 
+## Dashboard
+
+```bash
+source .venv/bin/activate
+streamlit run app/dashboard.py     # abre http://localhost:8501
+```
+
+Pestañas: **Simulador** (ABM + ODE con los controles de la barra lateral; pulsar *Simular*),
+**Comparar escenarios** (lee `results/<EXP>_metrics.csv` y `_curves.csv`) y **Estructura de la red**.
+Mientras el ABM/ODE reales no estén en `main`, usa datos de demostración (`fakenews.mock`) y lo avisa con
+un banner. Detalles en [`docs/informe/04d_dashboard.md`](docs/informe/04d_dashboard.md).
+
 ## Estructura
 
 Ver `docs/CONTRATO.md`, sección 4. (La versión final de este README —uso, resultados, cómo reproducir
