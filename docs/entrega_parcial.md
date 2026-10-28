@@ -31,4 +31,7 @@ Documento (lun 2 nov), repositorio público con el código, video, slides (máx.
 | dom 1 nov | Documento, slides y video terminados; congelamiento 22:00 |
 | lun 2 nov | Entrega final |
 
+## 7. Evidencia aprovación
+![Correo de aprobación del tema](img/correo_aprobacion.png)
+
 
