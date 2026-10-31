@@ -1,0 +1,5 @@
+hypothesis,comparison,network,metric,test,n_a,n_b,mean_a,mean_b,u,p_value,rank_biserial,expected_direction,verdict,p_value_holm,sampling
+H1,BA vs ER,,peak_I,Mann-Whitney bilateral exploratorio,15,15,0.07926666666666665,0.03826666666666667,225.0,3.3748749558581833e-06,1.0,greater,confirma,1.3465711970586202e-05,A: replicas pares; B: replicas impares
+H1,BA vs ER,,velocidad_1_sobre_t_peak,Mann-Whitney bilateral exploratorio,15,15,0.028781818899836206,0.014785023840913243,224.0,4.062322691392906e-06,0.991111111111111,greater,confirma,1.3465711970586202e-05,A: replicas pares; B: replicas impares
+H1,BA vs WS,,peak_I,Mann-Whitney bilateral exploratorio,15,15,0.07926666666666665,0.015226666666666668,225.0,3.3664279926465504e-06,1.0,greater,confirma,1.3465711970586202e-05,A: replicas pares; B: replicas impares
+H1,BA vs WS,,velocidad_1_sobre_t_peak,Mann-Whitney bilateral exploratorio,15,15,0.028781818899836206,0.047263077472353636,12.0,3.223618890339971e-05,-0.8933333333333333,greater,refuta,3.223618890339971e-05,A: replicas pares; B: replicas impares

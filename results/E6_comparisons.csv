@@ -1,0 +1,7 @@
+hypothesis,comparison,network,metric,test,n_a,n_b,mean_a,mean_b,u,p_value,rank_biserial,expected_direction,verdict,p_value_holm,sampling
+H5,origen hub vs azar,ba,peak_I,Mann-Whitney bilateral exploratorio,15,15,0.10286666666666665,0.07569333333333333,220.0,8.990485340549946e-06,0.9555555555555555,greater,confirma,4.4952426702749726e-05,A: replicas pares; B: replicas impares
+H5,origen hub vs azar,ba,t_peak,Mann-Whitney bilateral exploratorio,15,15,19.466666666666665,36.733333333333334,0.0,3.136903481359645e-06,-1.0,less,confirma,1.882142088815787e-05,A: replicas pares; B: replicas impares
+H5,origen hub vs azar,er,peak_I,Mann-Whitney bilateral exploratorio,15,15,0.04949333333333333,0.03826666666666667,193.5,0.0008374845471551989,0.72,greater,confirma,0.0025124536414655963,A: replicas pares; B: replicas impares
+H5,origen hub vs azar,er,t_peak,Mann-Whitney bilateral exploratorio,15,15,51.266666666666666,70.2,27.5,0.0004514554026554576,-0.7555555555555555,less,confirma,0.0018058216106218304,A: replicas pares; B: replicas impares
+H5,origen hub vs azar,ws,peak_I,Mann-Whitney bilateral exploratorio,15,15,0.01892,0.015226666666666668,177.0,0.007884838576377165,0.5733333333333333,greater,confirma,0.01576967715275433,A: replicas pares; B: replicas impares
+H5,origen hub vs azar,ws,t_peak,Mann-Whitney bilateral exploratorio,15,15,25.333333333333332,23.2,132.0,0.42920700927591904,0.17333333333333334,less,evidencia_insuficiente,0.42920700927591904,A: replicas pares; B: replicas impares

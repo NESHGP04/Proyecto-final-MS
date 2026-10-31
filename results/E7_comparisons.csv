@@ -1,0 +1,5 @@
+hypothesis,comparison,network,metric,test,n_a,n_b,mean_a,mean_b,u,p_value,rank_biserial,expected_direction,verdict,p_value_holm,sampling
+exploratoria,silencio vs prebunk; degree,ba,reach,Mann-Whitney bilateral exploratorio,15,15,0.22488000000000002,0.31804,27.5,0.0004554480380310929,-0.7555555555555555,less,confirma,0.0018217921521243715,A: replicas pares; B: replicas impares
+exploratoria,silencio vs prebunk; random,ba,reach,Mann-Whitney bilateral exploratorio,15,15,0.5128133333333333,0.5197866666666667,77.5,0.152340874342288,-0.3111111111111111,less,evidencia_insuficiente,0.45702262302686397,A: replicas pares; B: replicas impares
+exploratoria,silencio vs prebunk; degree,er,reach,Mann-Whitney bilateral exploratorio,15,15,0.4316666666666667,0.42488,125.5,0.6040860725185493,0.11555555555555563,less,evidencia_insuficiente,1.0,A: replicas pares; B: replicas impares
+exploratoria,silencio vs prebunk; random,er,reach,Mann-Whitney bilateral exploratorio,15,15,0.48469333333333336,0.48911999999999994,98.0,0.5613603057720339,-0.12888888888888894,less,evidencia_insuficiente,1.0,A: replicas pares; B: replicas impares
