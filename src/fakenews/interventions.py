@@ -31,16 +31,43 @@ class InterventionPlan:
 
 
 def select_nodes(G: nx.Graph, frac: float, targeting: str, rng: np.random.Generator) -> np.ndarray:
-    """Elige round(frac * n) nodos: al azar ("random") o los de mayor grado ("degree")."""
-    raise NotImplementedError("P3 (Juan Francisco): implementar")
+    """Elige round(frac * n) nodos sin reemplazo; desempata grados con rng.
+
+    Se devuelven las etiquetas del grafo. Las redes del ABM usan enteros 0..n-1.
+    Una selección vacía no consume números aleatorios: delta no cambia las semillas.
+    """
+    if not np.isfinite(frac) or not 0 <= frac <= 1:
+        raise ValueError("frac debe estar entre 0 y 1")
+    if targeting not in ("random", "degree"):
+        raise ValueError("targeting debe ser 'random' o 'degree'")
+    nodes = np.asarray(list(G.nodes()))
+    count = round(frac * len(nodes))
+    if count == 0:
+        return np.array([], dtype=nodes.dtype if len(nodes) else int)
+    if targeting == "random":
+        return nodes[rng.choice(len(nodes), size=count, replace=False)]
+    # Barajar antes de ordenar evita favorecer etiquetas pequeñas cuando hay empates.
+    shuffled = rng.permutation(len(nodes))
+    degrees = np.asarray([G.degree(node) for node in nodes])
+    order = np.argsort(-degrees[shuffled], kind="stable")
+    return nodes[shuffled[order[:count]]]
 
 
 def plan(G: nx.Graph, intervention: Optional[Intervention], rng: np.random.Generator) -> InterventionPlan:
     """Convierte una Intervention en un InterventionPlan para el grafo G.
 
-    Versión mínima (Checkpoint 0): sin intervención -> plan vacío; con delta -> solo delta.
-    P3 debe completar silence_frac / prebunk_frac con select_nodes.
+    Silencio y prebunking se seleccionan independientemente sobre el grafo original;
+    pueden coincidir. El ABM decide qué seleccionados siguen susceptibles al aplicarlo.
     """
     if intervention is None:
         return InterventionPlan()
-    return InterventionPlan(t_start=int(np.ceil(intervention.t_start)), delta=intervention.delta)
+    if not np.isfinite(intervention.t_start) or intervention.t_start < 0:
+        raise ValueError("t_start debe ser finito y no negativo")
+    if not np.isfinite(intervention.delta) or intervention.delta < 0:
+        raise ValueError("delta debe ser finito y no negativo")
+    return InterventionPlan(
+        t_start=int(np.ceil(intervention.t_start)),
+        silence=select_nodes(G, intervention.silence_frac, intervention.targeting, rng),
+        immunize=select_nodes(G, intervention.prebunk_frac, intervention.targeting, rng),
+        delta=intervention.delta,
+    )
