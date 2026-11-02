@@ -1,0 +1,9 @@
+network,metric,mean_falsa,mean_verdadera,n_falsa,n_verdadera,U,p_value,rank_biserial,expected,verdict
+er,reach,0.5638733333333333,0.07882000000000002,30,30,900.0,3.0198593591621564e-11,1.0,falsa greater que verdadera,consistente
+er,peak_I,0.04004666666666666,0.010053333333333334,30,30,900.0,1.714791384821709e-12,1.0,falsa greater que verdadera,consistente
+er,t_5pct,15.3,47.56666666666667,30,30,0.0,2.687586583440798e-11,-1.0,falsa less que verdadera,consistente
+er,t_peak,70.0,0.3333333333333333,30,30,900.0,1.7093477446316868e-12,1.0,falsa less que verdadera,no_consistente
+ba,reach,0.5653466666666667,0.22008,30,30,900.0,3.016075319890922e-11,1.0,falsa greater que verdadera,consistente
+ba,peak_I,0.07748,0.016766666666666666,30,30,900.0,2.9672748660399936e-11,1.0,falsa greater que verdadera,consistente
+ba,t_5pct,10.7,21.233333333333334,30,30,15.0,1.0595696663625005e-10,-0.9666666666666667,falsa less que verdadera,consistente
+ba,t_peak,36.1,37.5,30,30,361.5,0.19261675659594313,-0.19666666666666666,falsa less que verdadera,no_consistente
