@@ -7,6 +7,15 @@ venv/
 .pytest_cache/
 .ipynb_checkpoints/
 .env
+.env.*
+!.env.example
+!.env.template
+
+# Salidas de depuración; los CSV y PNG finales sí se versionan.
+/results/quick/
+/results/mock/
+/results/mock_quick/
+/figures/quick/
 
 # Instrucciones privadas del reparto (se pasan por WhatsApp, no van al repo público)
 tareas/
